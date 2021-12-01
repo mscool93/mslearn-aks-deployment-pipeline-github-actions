@@ -27,7 +27,7 @@ jobs:
         uses: docker/setup-buildx-action@v1
 
       - name: Restart Docker
-        run: cat /etc/hosts ; sudo service docker restart; ps -ef| grep docker; docker --version
+        run: sudo echo 'nameserver 8.8.8.8' >> /etc/resolv.conf ; sudo echo 'nameserver 8.8.4.4' >> /etc/resolv.conf;  sudo systemctl daemon-reload ;sudo systemctl restart docker; ps -ef| grep docker; docker --version
 
       - name: Docker Login
         # You may pin to the exact commit or the version.
