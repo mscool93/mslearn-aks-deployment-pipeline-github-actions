@@ -12,7 +12,7 @@ spec:
         app: contoso-website
     spec:
       containers:
-        - image: !IMAGE!
+        - image: Ms832gContainerRegistry/contoso-website
           name: contoso-website
           resources:
             requests:
