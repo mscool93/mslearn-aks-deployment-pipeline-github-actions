@@ -25,6 +25,7 @@ jobs:
 
       - name: Set up Buildx
         uses: docker/setup-buildx-action@v1
+        run: sudo service docker restart
   
       - name: Docker Login
         # You may pin to the exact commit or the version.
