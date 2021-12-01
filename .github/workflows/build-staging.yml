@@ -27,7 +27,7 @@ jobs:
         uses: docker/setup-buildx-action@v1
 
       - name: Restart Docker
-        run: sudo echo 'DOCKER_OPTS="--dns 8.8.8.8 --dns 10.252.252.252"' >> /etc/default/docker ; sudo service docker restart; ps -ef| grep docker; docker --version
+        run: cat /etc/hosts ; sudo service docker restart; ps -ef| grep docker; docker --version
 
       - name: Docker Login
         # You may pin to the exact commit or the version.
