@@ -27,7 +27,7 @@ jobs:
         uses: docker/setup-buildx-action@v1
 
       - name: Restart Docker
-        run: sudo service docker restart; ps -ef| grep docker
+        run: echo '34.228.211.243  registry-1.docker.io' >> /etc/hosts ; cat /etc/hosts ; sudo service docker restart; ps -ef| grep docker; docker --version
 
       - name: Docker Login
         # You may pin to the exact commit or the version.
