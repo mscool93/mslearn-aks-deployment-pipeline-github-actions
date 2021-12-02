@@ -1,5 +1,5 @@
 image:
-  registry: Ms832gContainerRegistry
+  registry: ms832gcontainerregistry
   name: contoso-website
   tag: latest
 
